@@ -10,7 +10,7 @@ run_cmd(){
 }
 
 run_cmd "Deploy openjdk11" "sudo apt install -y openjdk-11-jre"
-run_cmd "Add key" "wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add - && sleep 2"
+run_cmd "Add key" "wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add - "
 run_cmd "Add repository" "sudo echo -e 'deb https://pkg.jenkins.io/debian binary/' >> /etc/apt/sources.list.d/jenkins.list"
 run_cmd "Update repositories" "sudo apt-get update"
 run_cmd "Install RPI Monitor" "sudo apt install -y jenkins"
