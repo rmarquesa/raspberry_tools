@@ -6,6 +6,7 @@ run_cmd(){
     sleep 2
     echo $1
     if $2; then echo "$1 ok"; else echo "$1 error"; exit 2;fi
+    echo
 }
 
 run_cmd "Deploy dirmngr" "sudo apt-get install dirmngr"
