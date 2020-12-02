@@ -6,7 +6,7 @@ run_cmd(){
     sleep 2
     echo $1
     if $2; then echo "$1 ok"; else echo "$1 error"; exit 2;fi
-    echo
+    echo -e "\n"
 }
 
 run_cmd "Deploy openjdk11" "sudo apt install -y openjdk-11-jre"
