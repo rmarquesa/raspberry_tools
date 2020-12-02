@@ -20,4 +20,4 @@ if sudo apt-get update > /dev/null; then echo "Update ok"; else echo "Update err
 
 sleep 2
 echo "Install RPI Monitor"
-if sudo apt-get install -y rpimonitor > /dev/null; then echo "Deploy ok"; else echo "Deploy error"; exit 2; fi
+if sudo apt-get install -y rpimonitor; then echo "Deploy ok"; else echo "Deploy error"; exit 2; fi
