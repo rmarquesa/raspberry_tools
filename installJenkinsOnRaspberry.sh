@@ -5,7 +5,7 @@ echo "Install Jenkins on Raspberry"
 run_cmd(){
     sleep 2
     echo $1
-    test $2 && echo "$1 ok" || echo "$1 error"; exit 2
+    if $2; then echo "$1 ok"; else echo "$1 error"; exit 2;fi
     echo
 }
 
